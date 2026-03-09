@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samayam Gowthami - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 32px;
+            color: #0066cc;
+            margin-bottom: 5px;
+        }
+        .contact-info {
+            font-size: 13px;
+            color: #666;
+        }
+        .contact-info span {
+            margin: 0 15px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0066cc;
+            border-bottom: 1px solid #0066cc;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .entry {
+            margin-bottom: 20px;
+        }
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+        .entry-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #000;
+        }
+        .entry-date {
+            font-size: 13px;
+            color: #666;
+            font-style: italic;
+        }
+        .entry-subtitle {
+            font-size: 13px;
+            color: #0066cc;
+            font-weight: 600;
+        }
+        .entry-description {
+            font-size: 13px;
+            color: #555;
+            margin-top: 5px;
+            line-height: 1.5;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 13px;
+            color: #555;
+        }
+        .skill-item {
+            padding: 5px 0;
+        }
+        .skill-item strong {
+            color: #0066cc;
+        }
+        ul {
+            margin-left: 20px;
+            font-size: 13px;
+            color: #555;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .highlight {
+            color: #0066cc;
+            font-weight: 600;
+        }
+        @media print {
+            body {
+                padding: 0;
+            }
+            .container {
+                max-width: 100%;
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SAMAYAM GOWTHAMI</h1>
+            <div class="contact-info">
+                <span>📧 samayamgowthami@gmail.com</span>
+                <span>🔗 <a href="https://www.linkedin.com/in/gowthami-samayam-505764285/" style="color: #0066cc; text-decoration: none;">LinkedIn</a></span>
+                <span>💻 <a href="https://github.com/samayamgowthami-cell" style="color: #0066cc; text-decoration: none;">GitHub</a></span>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <div class="entry-description">
+                Passionate Cloud and Python Developer with expertise in AWS services, automation, and machine learning solutions. AWS Certified Cloud Practitioner with strong interests in DevOps and building scalable cloud applications. Skilled problem-solver with excellent teamwork and communication abilities.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-item"><strong>Languages:</strong> Python, MATLAB, SQL</div>
+                <div class="skill-item"><strong>Cloud:</strong> AWS (EC2, S3, Lambda, Transcribe, Comprehend)</div>
+                <div class="skill-item"><strong>Tools & Technologies:</strong> Git, DevOps, Docker</div>
+                <div class="skill-item"><strong>Specializations:</strong> Machine Learning, Cloud Computing, Automation</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">B.Tech in Electronics and Communication Engineering (ECE)</div>
+                </div>
+                <div class="entry-subtitle">Specialized in Cloud Computing and Machine Learning</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Certifications & Achievements</div>
+            <ul>
+                <li><span class="highlight">AWS Certified Cloud Practitioner</span> - Amazon Web Services</li>
+                <li><span class="highlight">2nd Prize - Technical Poster Presentation</span> - Academic Achievement</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Featured Projects</div>
+            <div class="entry">
+                <div class="entry-title">Communication Builder</div>
+                <div class="entry-subtitle">AWS Transcribe, Comprehend, S3</div>
+                <div class="entry-description">
+                    Developed a cloud-based solution that converts speech to text and analyzes communication quality. Demonstrates advanced integration of AWS AI services with real-world applications.
+                </div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Contact Book Application</div>
+                <div class="entry-subtitle">Python</div>
+                <div class="entry-description">
+                    Built a menu-driven CRUD application with robust file handling and comprehensive input validation. Showcases strong Python programming fundamentals and data management practices.
+                </div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Optical Sensor Deployment in WSN</div>
+                <div class="entry-subtitle">MATLAB, Hybrid IGWO-PSO Algorithm</div>
+                <div class="entry-description">
+                    MATLAB-based simulation project utilizing a hybrid IGWO-PSO optimization algorithm for wireless sensor networks. Demonstrates advanced algorithmic knowledge and research capabilities.
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Core Competencies</div>
+            <ul>
+                <li>Cloud Architecture and Deployment</li>
+                <li>Python Development and Automation</li>
+                <li>Machine Learning and AI Integration</li>
+                <li>Problem-Solving and Solution Design</li>
+                <li>Team Collaboration and Communication</li>
+                <li>AWS Services and DevOps Practices</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Auto-print and save as PDF functionality
+        window.addEventListener('load', function() {
+            // Uncomment the line below to auto-print when page loads
+            // window.print();
+        });
+    </script>
+</body>
+</html>
