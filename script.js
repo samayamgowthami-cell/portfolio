@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            if (pageYOffset >= (sectionTop - 200)) {
+            if (window.scrollY >= (sectionTop - 200)) {
                 current = section.getAttribute('id');
             }
         });
@@ -110,4 +110,59 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 4. Typing Effect Animation
+    const typingSpan = document.querySelector('.typing-text');
+    if (typingSpan) {
+        const roles = [
+            "<span class='gradient-text'>AWS Certified Cloud Practitioner</span>",
+            "Python Developer",
+            "Cloud & ML Enthusiast"
+        ];
+
+        // Use textContent alternative logic to avoid slicing HTML tags incorrectly
+        // Actually, since there's HTML in the roles, we should use simple text for typing, or handle the first one differently.
+        const plainRoles = [
+            "AWS Certified Cloud Practitioner",
+            "Python Developer",
+            "Cloud & ML Enthusiast"
+        ];
+
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeEffect() {
+            const currentRole = plainRoles[roleIndex];
+
+            // Re-apply gradient for the first role
+            let displayText = currentRole.substring(0, charIndex);
+            if (roleIndex === 0) {
+                displayText = `<span class="gradient-text">${displayText}</span>`;
+            }
+
+            if (isDeleting) {
+                charIndex--;
+            } else {
+                charIndex++;
+            }
+
+            typingSpan.innerHTML = displayText + '<span class="cursor">&nbsp;</span>';
+
+            let typeSpeed = isDeleting ? 30 : 100;
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % plainRoles.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+
+        setTimeout(typeEffect, 1000);
+    }
 });
