@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 roleIndex = (roleIndex + 1) % plainRoles.length;
                 typeSpeed = 500;
             }
-            else { console.log('Typing...'); }
+            else { console.log("Typing effect animation") }
 
             setTimeout(typeEffect, typeSpeed);
         }
